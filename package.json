@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "ci": "npm run build && npm run start"
+    "dev": "node .",
+    "ci": "npm run dev"
   },
   "keywords": [],
   "author": "",
