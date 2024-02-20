@@ -2,7 +2,6 @@ import express, { Express, Request, Response } from "express";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { appRouter, createContext } from "./trpc";
 
-
 const app: Express = express();
 
 app.get("/api/upload", (req: Request, res: Response) => {
@@ -17,10 +16,8 @@ app.use(
   })
 );
 
-
-
 app.listen(3000, () => {
   console.log("listening on port 3000...");
 });
 
-export default app
+module.exports = app

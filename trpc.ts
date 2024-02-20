@@ -8,9 +8,16 @@ const events = new EventEmitter();
 export const createContext = ({
   req,
   res,
-}: trpcExpress.CreateExpressContextOptions) => ({
-  name: 'hello'
-});
+}: trpcExpress.CreateExpressContextOptions) => {
+
+  res.setHeader('Content-Type', 'text/html');
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+
+  return {
+    name: 'bahman'
+  }
+
+}
 
 type Context = Awaited<ReturnType<typeof createContext>>;
 const t = initTRPC.context<Context>().create();
