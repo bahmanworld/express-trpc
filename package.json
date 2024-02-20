@@ -7,7 +7,8 @@
     "dev": "nodemon index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "preview": "npm run build && npm run start"
+    "preview": "npm run build && npm run start",
+    "postprepare": "npm run preview"
   },
   "keywords": [],
   "author": "",
