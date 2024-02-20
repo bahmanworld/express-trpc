@@ -33,10 +33,10 @@ const app = (0, express_1.default)();
 app.get("/api/upload", (req, res) => {
     res.json({ result: { data: "all files uploaded", success: true } });
 });
-app.use("/api", trpcExpress.createExpressMiddleware({
-    router: trpc_1.appRouter,
-    createContext: trpc_1.createContext,
-}));
+// app.use("/api", trpcExpress.createExpressMiddleware({
+//     router: trpc_1.appRouter,
+//     createContext: trpc_1.createContext,
+// }));
 app.listen(3000, () => {
     console.log("listening on port 3000...");
 });
